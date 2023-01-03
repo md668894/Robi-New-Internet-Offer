@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "216384619665",
+    "project_id": "robi-internet-offer-52332",
+    "storage_bucket": "robi-internet-offer-52332.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216384619665:android:9bf10e36090380d83e2b30",
+        "android_client_info": {
+          "package_name": "com.apsmarket.robiinternetoffer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216384619665-1udnvbco067hv7kmvlmernvru1pdf4et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8TdNJ-k52XDVX5TVfs7EVxXrzG099hIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216384619665-1udnvbco067hv7kmvlmernvru1pdf4et.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

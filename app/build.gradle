@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.application'
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.apsmarket.robiinternetoffer"
+        minSdk 21
+        targetSdk 32
+        multiDexEnabled true
+        versionCode 3
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    implementation platform('com.google.firebase:firebase-bom:31.0.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+
+    implementation 'com.google.android.gms:play-services-ads:21.4.0'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'com.facebook.android:audience-network-sdk:6.12.0'
+    implementation 'com.google.ads.mediation:facebook:6.12.0.0'
+    implementation 'com.unity3d.ads:unity-ads:4.4.1'
+    implementation 'com.google.ads.mediation:unity:4.4.1.0'
+    implementation 'com.startapp:inapp-sdk:4.10.5'
+    implementation 'com.startapp:admob-mediation:2.0.0'
+    implementation 'com.google.ads.mediation:applovin:11.5.4.0'
+}
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,168 @@
+<resources>
+    <string name="app_name">Robi Internet Offer</string>
+
+    <string name="banner1">ca-app-pub-2518334745896640/7486636024</string>
+    <string name="banner2">ca-app-pub-2518334745896640/9234831969</string>
+    <string name="banner3">ca-app-pub-2518334745896640/3507275831</string>
+    <string name="banner4">ca-app-pub-2518334745896640/2784973681</string>
+    <string name="banner5">ca-app-pub-2518334745896640/1471892013</string>
+
+    <string name="i_ads">ca-app-pub-2518334745896640/8935449063</string>
+
+
+    <string name="robi_regular_internet">https://mobileviw.com/go/robi-internet-offer</string>
+
+    <string name="webview_text">1.Please Check Internet Connetion.\n2.Then Refresh This Page.</string>
+
+
+    <string name="Robi_code">
+         হেল্প লাইন নাম্বার <b><font color="#008DFD">121</font></b> অথবা <b><font color="#008DFD">01819400400</font></b> \n\n
+ব্যালেন্স চেক করতে <b><font color="#008DFD">*222#</font></b> অথবা <b><font color="#008DFD">*1#</font></b>\n\n
+সিমের নাম্বার দেখতে <b><font color="#008DFD">*2#</font></b> \n\n
+আজকের অফার দেখতে <b><font color="#008DFD">*999#</font></b> অথবা <b><font color="#008DFD">*999*1#</font></b> \n\n
+MB দেখতে <b><font color="#008DFD">*8444*88#</font></b> অথবা <b><font color="#008DFD">*3#</font></b> \n\n
+মিনিট বান্ডেল কিনতে <b><font color="#008DFD">*0#</font></b> \n\n
+রবি মিনিট চেক - <b><font color="#008DFD">*222*2# or *222*3# or *222*8# or *222*9# </font></b> \n\n
+MB কিনতে <b><font color="#008DFD">*8444#</font></b> অথবা <b><font color="#008DFD">*4#</font></b> \n\n
+ইন্টারনেট সেটিং <b><font color="#008DFD">*5#</font></b>
+ সিমের প্যাকেজ দেখতে <b><font color="#008DFD">*140*14#</font></b> অথবা <b><font color="#008DFD">*6#</font></b> \n\n
+বিভিন্ন প্যাকেজ সম্পর্কে জানতে <b><font color="#008DFD">*140*24#</font></b> \n\n
+টাকা কাটে এমন সব সার্ভিস বন্ধ করতে <b><font color="#008DFD">*9#</font></b> \n\n
+ইমারজেন্সি ব্যালেন্স নিতে <b><font color="#008DFD">*121*007#</font></b> \n\n
+সর্বশেষ রিচার্জ দেখতে <b><font color="#008DFD">*777#</font></b> \n\n
+এই মাসে কত টাকা খরচ করেছেন তা দেখতে <b><font color="#008DFD">*444*71#</font></b>\n\n
+মিসকল এলার্ট চালু করতে <b><font color="#008DFD">*140*2*1#</font></b> (ফ্রী)\n\n
+মিসকল এলার্ট বন্ধ করতে <b><font color="#008DFD">*140*2*2#</font></b> (ফ্রী)\n\n
+সর্বশেষ কল এর বিবরণ সার্ভিস চালু করতে <b><font color="#008DFD">*8333*1#</font></b>\n\n
+সর্বশেষ কল এর বিবরণ সার্ভিস বন্ধ করতে <b><font color="#008DFD">*8333*2#</font></b> \n\n
+রবি থেকে রবি টাকা ট্রান্সফার করতে টাকার পরিমাণ লিখে পাঠিয়ে দিন <b><font color="#008DFD">1212018********</font></b> \n\n
+বন্ধ সিমের আওতায় কিনা তা জানতে যেকোনো রবি নাম্বার থেকে <b><font color="#008DFD">A 018*********</font></b> লিখে মেসেজ পাঠান <b><font color="#008DFD">8050</font></b> নাম্বারে\n\n
+বিস্তারিত জানতে রবি ওয়েবসাইট এ ভিজিট করুন </string>
+
+
+
+    <string name="robi_minute_offer">
+        রবি মিনিট চেক - <b><font color="#009688">*222*2# or *222*3# or *222*8# or *222*9#  (*222*12# sms check) </font></b> \n\n
+        15 মিনিট 10 টাকা মেয়াদ 12 ঘন্টা - <b><font color="#147ED3">\n ডায়াল - *0*1# </font></b> \n\n
+        40 মিনিট 27 টাকা মেয়াদ 2 দিন - <b><font color="#147ED3">\n ডায়াল - *0*2# </font></b> \n\n
+        50 মিনিট 30 টাকা মেয়াদ 2 দিন - <b><font color="#147ED3">\n ডায়াল - *0*9# </font></b> \n\n
+        65 মিনিট 43 টাকা মেয়াদ 4 দিন - <b><font color="#147ED3">\n ডায়াল - *0*3# </font></b> \n\n
+        75 মিনিট 50 টাকা মেয়াদ 5 দিন - <b><font color="#147ED3">\n ডায়াল - *0*10# </font></b> \n\n
+
+        85 মিনিট 59 টাকা মেয়াদ 7 দিন - <b><font color="#147ED3">\n ডায়াল - *0*8# </font></b> \n\n
+        95 মিনিট 64 টাকা মেয়াদ 7 দিন - <b><font color="#147ED3">\n ডায়াল - *0*4# </font></b> \n\n
+        155 মিনিট 99 টাকা মেয়াদ 7 দিন - <b><font color="#147ED3">\n ডায়াল - *0*5# </font></b> \n\n
+        170 মিনিট 104 টাকা মেয়াদ 7 দিন - <b><font color="#147ED3">\n ডায়াল - *0*12# </font></b> \n\n
+
+        300 মিনিট 199 টাকা মেয়াদ 30 দিন - <b><font color="#147ED3">\n ডায়াল - *0*14# </font></b> \n\n
+        320 মিনিট 207 টাকা মেয়াদ 30 দিন - <b><font color="#147ED3">\n ডায়াল - *0*6# </font></b> \n\n
+        360 মিনিট 220 টাকা মেয়াদ 30 দিন - <b><font color="#147ED3">\n ডায়াল - *0*13# </font></b> \n\n
+        500 মিনিট 307 টাকা মেয়াদ 30 দিন - <b><font color="#147ED3">\n ডায়াল - *0*11# </font></b> \n\n
+        840 মিনিট 507 টাকা মেয়াদ 30 দিন - <b><font color="#147ED3">\n ডায়াল - *0*7# </font></b> </string>
+
+
+
+
+    <string name="robi_internet_offer">
+        এমবি চেক করতে – <b><font color="#009688">\n *3# অথবা *8444*88#</font></b> \n\n
+        50 এমবি 5 টাকা মেয়াদ 3 দিন  <b><font color="#147ED3">\n ডায়াল - *123*0010# </font></b>\n\n
+        1 জিবি 41 টাকা মেয়াদ 3 দিন  <b><font color="#147ED3">\n ডায়াল - *123*41# </font></b> \n\n
+        1.5 জিবি 57 টাকা মেয়াদ 3 দিন  <b><font color="#147ED3">\n ডায়াল - *123*57# </font></b> \n\n
+        3 জিবি 58 টাকা মেয়াদ 3 দিন (Daily 1GB)  <b><font color="#147ED3">\n ডায়াল - *123*58# </font></b> \n\n
+        4 জিবি 68 টাকা মেয়াদ 3 দিন  <b><font color="#147ED3">\n ডায়াল - *123*68# </font></b> \n\n
+        10 জিবি 89 টাকা মেয়াদ 3 দিন  <b><font color="#147ED3">\n ডায়াল - *123*89# </font></b> \n\n
+
+        3 জিবি 114 টাকা মেয়াদ 7 দিন  <b><font color="#147ED3">\n ডায়াল - *123*114# </font></b> \n\n
+        5 জিবি 114 টাকা মেয়াদ 7 দিন <b><font color="#147ED3">\n ডায়াল - *123*049# </font></b> \n\n
+        7 জিবি 129 টাকা মেয়াদ 7 দিন  <b><font color="#147ED3">\n ডায়াল - *123*129# </font></b> \n\n
+
+        8 জিবি 299 টাকা মেয়াদ 30 দিন  <b><font color="#147ED3">\n ডায়াল - *123*299# </font></b> \n\n
+        16 জিবি 349 টাকা মেয়াদ 30 দিন  <b><font color="#147ED3">\n ডায়াল - *123*349# </font></b> \n\n
+        20 জিবি 399 টাকা মেয়াদ 30 দিন  <b><font color="#147ED3">\n ডায়াল - *123*399# </font></b> \n\n
+        45 জিবি 497 টাকা মেয়াদ 30 দিন  <b><font color="#147ED3">\n ডায়াল - *123*497# </font></b> \n\n
+        60 জিবি 497 টাকা মেয়াদ 30 দিন  <b><font color="#147ED3">\n ডায়াল - *123*698# </font></b> </string>
+
+
+
+    <string name="robi_minute_recharge">
+        রবি মিনিট চেক - <b><font color="#009688"> *222*2# or *222*3# or *222*8# or *222*9# \n\n</font></b>
+        <b><font color="#147ED3"> 29 টাকায় </font></b>\n 46 মিনিট মেয়াদ - 5 দিন \n\n
+
+        <b><font color="#147ED3"> 49 টাকায় </font></b>\n 80 মিনিট মেয়াদ - 7 দিন \n\n
+        <b><font color="#147ED3"> 65 টাকায় </font></b>\n 95 মিনিট মেয়াদ - 15 দিন \n\n
+
+        <b><font color="#147ED3"> 109 টাকায় </font></b>\n 165 মিনিট মেয়াদ - 30 দিন \n\n
+        <b><font color="#147ED3"> 169 টাকায় </font></b>\n 230 মিনিট মেয়াদ - 30 দিন \n\n
+
+        <b><font color="#147ED3"> 199 টাকায় </font></b>\n 300 মিনিট মেয়াদ - 30 দিন\n\n
+        <b><font color="#147ED3"> 298 টাকায় </font></b>\n 480 মিনিট মেয়াদ - 30 দিন\n\n
+
+        <b><font color="#147ED3"> 307 টাকায় </font></b>\n 500 মিনিট মেয়াদ - 30 দিন \n\n
+        <b><font color="#147ED3"> 398 টাকায় </font></b>\n 650 মিনিট মেয়াদ - 30 দিন \n\n
+        <b><font color="#147ED3"> 507 টাকায় </font></b>\n 840 মিনিট মেয়াদ - 30 দিন </string>
+
+
+
+    <string name="robi_internet_recharge">
+        এমবি চেক করতে – <b><font color="#009688">\n *3# অথবা *8444*88# </font></b> \n\n
+       1.6 জিবি <b><font color="#147ED3"> 39 টাকা </font></b> মেয়াদ 3 দিন \n\n
+       3 জিবি (Daily 1 GB) <b><font color="#147ED3"> 58 টাকা </font></b> মেয়াদ 3 দিন \n\n
+       4 জিবি <b><font color="#147ED3"> 68 টাকা </font></b> মেয়াদ 3 দিন \n\n
+       8 জিবি <b><font color="#147ED3"> 89 টাকা </font></b> মেয়াদ 3 দিন \n\n
+
+       4 জিবি <b><font color="#147ED3"> 114 টাকা </font></b> মেয়াদ 7 দিন \n\n
+       7 জিবি <b><font color="#147ED3"> 129 টাকা </font></b> মেয়াদ 7 দিন \n\n
+       10 জিবি <b><font color="#147ED3"> 148 টাকা </font></b> মেয়াদ 7 দিন \n\n
+
+       8 জিবি <b><font color="#147ED3"> 299 টাকা </font></b> মেয়াদ 30 দিন \n\n
+       15 জিবি <b><font color="#147ED3"> 349 টাকা </font></b> মেয়াদ 30 দিন \n\n
+       18 জিবি <b><font color="#147ED3"> 399 টাকা </font></b> মেয়াদ 30 দিন \n\n
+       35 জিবি <b><font color="#147ED3"> 449 টাকা </font></b> মেয়াদ 30 দিন \n\n
+       45 জিবি <b><font color="#147ED3"> 498 টাকা </font></b> মেয়াদ 30 দিন </string>
+
+
+
+    <string name="loadtext">এই অফার গুলো শুধুমাত্র রবি জি স্টোর থেকে রিচার্জ করলেই পাবেন অথবা আপনি চাইলে আমাদের কাছ থেকে টাকা পাঠিয়ে কিনে নিতে পারেন। প্যাকেজ গুলো যেভাবে আমাদের কাছ থেকে নিবেন, </string>
+    <string name="robi_recharge_offer">
+<b><font color="#147ED3">98 টাকায়</font></b> \n1.5 জিবি + 100 মিনিট মেয়াদ 3 দিন \n\n
+<b><font color="#147ED3">149 টাকায়</font></b> \n7 জিবি + 200 মিনিট মেয়াদ 7 দিন \n\n
+
+<b><font color="#147ED3">249 টাকায়</font></b> \n3 জিবি + 200 মিনিট মেয়াদ 30 দিন \n\n
+<b><font color="#147ED3">269 টাকায়</font></b> \n8 জিবি + 250 মিনিট মেয়াদ 30 দিন \n\n
+<b><font color="#147ED3">324 টাকায়</font></b> \n2 জিবি + 525 মিনিট মেয়াদ 30 দিন \n\n
+<b><font color="#147ED3">499 টাকায়</font></b> \n14 জিবি + 400 মিনিট মেয়াদ 30 দিন \n\n
+<b><font color="#147ED3">599 টাকায়</font></b> \n20 জিবি + 500 মিনিট মেয়াদ 30 দিন \n\n
+       <font color="#FF0066"> 600 টাকা দামের উপরের অফারগুলো কিছু কম রাখা যাবে:</font> \n\n
+<b><font color="#147ED3">609 টাকায়</font></b> \n5 জিবি + 1000 মিনিট মেয়াদ 30 দিন \n\n
+<b><font color="#147ED3">719 টাকায়</font></b> \n30 জিবি + 700 মিনিট মেয়াদ 30 দিন \n\n
+<b><font color="#147ED3">799 টাকায়</font></b> \n40 জিবি + 800 মিনিট মেয়াদ 30 দিন \n\n
+<b><font color="#147ED3">899 টাকায়</font></b> \n50 জিবি + 1000 মিনিট মেয়াদ 30 দিন \n\n
+     <b><font color="#147ED3">এই অফার গুলো চিটাগাং বিভাগ বাদে সবাই পাবে...</font></b> </string>
+
+
+
+    <string name="promot">if you want to sponsor with us, please contact.\n\n
+   <b>apkmarket500@gmail.com</b></string>
+    <string name="promot2">আপনার যেকোন প্রোডাক্ট অনলাইনে প্রমোট করতে আমাদের সাথে যোগাযোগ করুন: নিচের মেইলের মাধ্যমে। যেমন: অ্যান্ড্রয়েড অ্যাপ, ওয়েবসাইট,  ইউটিউব ভিডিও, ইউটিউব চ্যানেল ইত্যাদি। </string>
+
+
+    //Social Media Pack
+    <string name="robi_social_media_pack">ব্যালেন্স চেক করতে - *123*3*5# \n\n
+100 এমবি  (ফেইসবুক এবং ইমো) 10  টাকা  মেয়াদ 3 দিন - *123*0010# \n\n
+200 এমবি ফেইসবুক 19 টাকা  মেয়াদ 7 দিন - *123*019# \n\n
+350 এমবি ইমো প্যাক 20 টাকা  মেয়াদ 3 দিন - *123*56# \n\n
+1 জিবি ইমো প্যাক 55 টাকা  মেয়াদ 28  দিন - *123*056# \n\n
+3 জিবি  ফেইসবুক 95 টাকা  মেয়াদ 30 দিন - *212*717#</string>
+
+    <string name="flexiload"><b><font color="#FFFD0257">✅1.</font></b> আপনি যদি ঘরে বসে আমাদের কাছ থেকে কোন ইন্টারনেট বা মিনিট প্যাকেজ কিনতে চান, তাহলে প্রথমে সেই প্যাকেজের গায়ে কত টাকা লেখা আছে তা চেক করুন। \n\n
+
+ <b><font color="#FFFD0257">✅2.</font></b> তারপর সেই টাকাটা আমাদের এই নাম্বারে (01813420461) সেন্ড মানি করবেন। বিকাশ, নগদ অথবা রকেটে। \n\n
+
+✅ তারপর আমাদেরকে কল করে জানিয়ে দিন আপনি কত নাম্বার থেকে টাকা পাঠিয়েছেন এবং কোন নাম্বারে প্যাকেজটা নিতে চান আমরা সাথে সাথে সেই নাম্বারে প্যাকেজটা পাঠিয়ে দিব।</string>
+
+    <string name="flexiload1">❌<b><font color="#FFFD0257">লক্ষ করুনঃ অযথা অন্য কোনো তথ্যের জন্য কল দিয়ে বিরক্ত করবেন না। শুধুমাত্র যারা প্যাকেজ গুলো কিনতে চান, তারাই কল করবেন।</font></b></string>
+
+    <string name="bkash">আপনার যদি বিকাশ, নগদ, রকেট একাউন্ট খোলা না থাকে, তাহলে <a href="https://play.google.com/store/apps/details?id=com.apsmarket.mobilebanking">এখানে ক্লিক করে</a> এই অ্যাপটি ইন্সটল করুন।</string>
+
+
+</resources>
