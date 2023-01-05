@@ -47,4 +47,10 @@ public class Robi_Minute_offer extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Robi.interstitialAd.showAd();
+    }
 }

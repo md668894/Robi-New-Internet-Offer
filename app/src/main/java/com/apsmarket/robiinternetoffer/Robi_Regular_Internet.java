@@ -13,8 +13,6 @@ import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-import com.apsmarket.robiinternetoffer.service.Service;
 import com.facebook.ads.AudienceNetworkAds;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -162,19 +160,17 @@ public class Robi_Regular_Internet extends AppCompatActivity {
             webView.goBack();
         } else {
             super.onBackPressed();
-            if (Service.mInterstitialAd != null) {
-                Service.mInterstitialAd.show(Robi_Regular_Internet.this);
-                Service.mInterstitialAd = null;
+            if (Robi.interstitialAd.isReady()) {
+                Robi.interstitialAd.showAd();
             }
         }
     }
 
     public void finish(View view) {
         finish();
-        if (Service.mInterstitialAd != null) {
-            Service.mInterstitialAd.show(Robi_Regular_Internet.this);
-            Service.mInterstitialAd = null;
-        }
+        if (Robi.mInterstitialAd != null) {
+            Robi.mInterstitialAd.show(Robi_Regular_Internet.this);
+        }else {Robi.interstitialAd.showAd();}
     }
 
     public void back(View view) {
@@ -209,11 +205,10 @@ public class Robi_Regular_Internet extends AppCompatActivity {
                 public void run() {
                     runOnUiThread(new Runnable() {
                         public void run() {
-                            if (Service.mInterstitialAd != null) {
-                                Service.mInterstitialAd.show(Robi_Regular_Internet.this);
-                                Service.mInterstitialAd = null;
+                            if (Robi.mInterstitialAd != null) {
+                                Robi.interstitialAd.showAd();
                             } else {
-                                //Log.d("TAG", " Interstitial not loaded");
+                                Robi.interstitialAd.showAd();
                             }
                             //I_ADS();
                         }

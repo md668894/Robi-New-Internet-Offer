@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
-import com.apsmarket.robiinternetoffer.service.Service;
 import com.facebook.ads.AudienceNetworkAds;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -67,11 +65,17 @@ public class Robi_Recharge extends AppCompatActivity {
         });
     }
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Robi.interstitialAd.showAd();
+    }
+
     public void flexiload(View view) {
         startActivity(new Intent(getApplicationContext(),Flexiload.class));
-        if (Service.mInterstitialAd != null) {
-            Service.mInterstitialAd.show(Robi_Recharge.this);
-            Service.mInterstitialAd = null;
-        }
+        if (Robi.mInterstitialAd != null) {
+            Robi.mInterstitialAd.show(Robi_Recharge.this);
+        }else {Robi.interstitialAd.showAd();}
     }
 }

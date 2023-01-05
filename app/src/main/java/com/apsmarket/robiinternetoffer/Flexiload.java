@@ -53,6 +53,12 @@ public class Flexiload extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Robi.interstitialAd.showAd();
+    }
+
     public void call_us(View view) {
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel:01813420461"));

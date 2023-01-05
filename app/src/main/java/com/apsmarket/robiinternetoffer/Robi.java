@@ -13,18 +13,26 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
 
-import com.apsmarket.robiinternetoffer.service.Service;
+import com.applovin.mediation.MaxAd;
+import com.applovin.mediation.MaxAdViewAdListener;
+import com.applovin.mediation.MaxError;
+import com.applovin.mediation.ads.MaxInterstitialAd;
 import com.facebook.ads.AudienceNetworkAds;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.onesignal.OneSignal;
 
 public class Robi extends AppCompatActivity {
     private AdView mAdView;
+    public static InterstitialAd mInterstitialAd;
+    public static MaxInterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +44,6 @@ public class Robi extends AppCompatActivity {
         // OneSignal Initialization
         OneSignal.initWithContext(this);
         OneSignal.setAppId("312c0a96-63df-4b15-b9ca-01e5b34d9229");
-
         getSupportActionBar().setTitle("রবি ইন্টারনেট ও মিনিট অফার");
 
         AudienceNetworkAds.initialize(this);
@@ -61,78 +68,131 @@ public class Robi extends AppCompatActivity {
                 mAdView.loadAd(new AdRequest.Builder().build());
             }
         });
+        I_ADS();
+        applvinInterstitial();
+    }
+
+    private void applvinInterstitial() {
+        interstitialAd = new MaxInterstitialAd( "36e5b30b69adf20f", this );
+        interstitialAd.loadAd();
+        interstitialAd.setListener(new MaxAdViewAdListener() {
+            @Override
+            public void onAdExpanded(MaxAd ad) {
+            }
+
+            @Override
+            public void onAdCollapsed(MaxAd ad) {
+            }
+
+            @Override
+            public void onAdLoaded(MaxAd ad) {
+            }
+
+            @Override
+            public void onAdDisplayed(MaxAd ad) {
+                applvinInterstitial();
+            }
+
+            @Override
+            public void onAdHidden(MaxAd ad) {
+            }
+
+            @Override
+            public void onAdClicked(MaxAd ad) {
+            }
+
+            @Override
+            public void onAdLoadFailed(String adUnitId, MaxError error) {
+                interstitialAd.loadAd();
+            }
+
+            @Override
+            public void onAdDisplayFailed(MaxAd ad, MaxError error) {
+                interstitialAd.loadAd();
+            }
+        });interstitialAd.loadAd();
+    }
+
+    private void I_ADS() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        InterstitialAd.load(this, getString(R.string.i_ads), adRequest, new InterstitialAdLoadCallback() {
+            @Override
+            public void onAdLoaded(InterstitialAd interstitialAd) {
+                mInterstitialAd = interstitialAd;
+
+                mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                    @Override
+                    public void onAdDismissedFullScreenContent() {
+                        super.onAdDismissedFullScreenContent();
+                        mInterstitialAd = null;
+                        I_ADS();
+                    }
+                });
+            }
+        });
     }
 
     public void robi_code(View view) {
         startActivity(new Intent(getApplicationContext(),Robi_Code.class));
-        if (Service.mInterstitialAd != null) {
-            Service.mInterstitialAd.show(Robi.this);
-            Service.mInterstitialAd = null;
-        }
+        if (mInterstitialAd != null){
+            mInterstitialAd.show(Robi.this);
+        }else {interstitialAd.showAd();}
     }
 
     public void robi_minute_offer(View view) {
         startActivity(new Intent(getApplicationContext(),Robi_Minute_offer.class));
-        if (Service.mInterstitialAd != null) {
-            Service.mInterstitialAd.show(Robi.this);
-            Service.mInterstitialAd = null;
-        }
+        if (mInterstitialAd != null){
+            mInterstitialAd.show(Robi.this);
+        }else {interstitialAd.showAd();}
     }
 
     public void robi_internet_offer(View view) {
         startActivity(new Intent(getApplicationContext(),Robi_Internet_offer.class));
-        if (Service.mInterstitialAd != null) {
-            Service.mInterstitialAd.show(Robi.this);
-            Service.mInterstitialAd = null;
-        }
+        if (mInterstitialAd != null){
+            mInterstitialAd.show(Robi.this);
+        }else {interstitialAd.showAd();}
     }
 
     public void robi_social_pack(View view) {
         startActivity(new Intent(getApplicationContext(),Robi_Socal_Pack.class));
-        if (Service.mInterstitialAd != null) {
-            Service.mInterstitialAd.show(Robi.this);
-            Service.mInterstitialAd = null;
-        }
+        if (mInterstitialAd != null){
+            mInterstitialAd.show(Robi.this);
+        }else {interstitialAd.showAd();}
     }
 
     public void robi_regular_internet_offer(View view) {
         startActivity(new Intent(getApplicationContext(),Robi_Regular_Internet.class));
-        if (Service.mInterstitialAd != null) {
-            Service.mInterstitialAd.show(Robi.this);
-            Service.mInterstitialAd = null;
-        }
+        if (mInterstitialAd != null){
+            mInterstitialAd.show(Robi.this);
+        }else {interstitialAd.showAd();}
     }
 
     public void robi_minute_recharge_offer(View view) {
         startActivity(new Intent(getApplicationContext(),Robi_Minute_Recharge.class));
-        if (Service.mInterstitialAd != null) {
-            Service.mInterstitialAd.show(Robi.this);
-            Service.mInterstitialAd = null;
-        }
+        if (mInterstitialAd != null){
+            mInterstitialAd.show(Robi.this);
+        }else {interstitialAd.showAd();}
     }
 
     public void robi_internet_recharge(View view) {
         startActivity(new Intent(getApplicationContext(),Robi_Internet_Recharge.class));
-        if (Service.mInterstitialAd != null) {
-            Service.mInterstitialAd.show(Robi.this);
-            Service.mInterstitialAd = null;
-        }
+        if (mInterstitialAd != null){
+            mInterstitialAd.show(Robi.this);
+        }else {interstitialAd.showAd();}
     }
 
     public void robi_recharge(View view) {
         startActivity(new Intent(getApplicationContext(),Robi_Recharge.class));
-        if (Service.mInterstitialAd != null) {
-            Service.mInterstitialAd.show(Robi.this);
-            Service.mInterstitialAd = null;
-        }
+        if (mInterstitialAd != null){
+            mInterstitialAd.show(Robi.this);
+        }else {interstitialAd.showAd();}
     }
 
     public void flexiload(View view) {
         startActivity(new Intent(getApplicationContext(),Flexiload.class));
-        if (Service.mInterstitialAd != null) {
-            Service.mInterstitialAd.show(Robi.this);
-            Service.mInterstitialAd = null;
-        }
+        if (mInterstitialAd != null){
+            mInterstitialAd.show(Robi.this);
+        }else {interstitialAd.showAd();}
     }
 
     public void more(View view) {

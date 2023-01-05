@@ -46,4 +46,10 @@ public class Robi_Internet_offer extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Robi.interstitialAd.showAd();
+    }
 }
