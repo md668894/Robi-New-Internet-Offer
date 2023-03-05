@@ -4,17 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import com.facebook.ads.AudienceNetworkAds;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class Robi_Internet_Recharge extends AppCompatActivity {
     private AdView mAdView;
+    private  boolean chech = false;
     private AdView mAdView2;
 
     @Override
@@ -41,6 +44,17 @@ public class Robi_Internet_Recharge extends AppCompatActivity {
             }
 
             @Override
+            public void onAdFailedToLoad(LoadAdError loadAdError) {
+                super.onAdFailedToLoad(loadAdError);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mAdView.loadAd(new AdRequest.Builder().build());
+                    }
+                }, 10000);
+            }
+
+            @Override
             public void onAdClosed() {
                 super.onAdClosed();
                 mAdView.loadAd(new AdRequest.Builder().build());
@@ -57,23 +71,52 @@ public class Robi_Internet_Recharge extends AppCompatActivity {
             }
 
             @Override
+            public void onAdFailedToLoad(LoadAdError loadAdError) {
+                super.onAdFailedToLoad(loadAdError);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mAdView2.loadAd(new AdRequest.Builder().build());
+                    }
+                }, 10000);
+            }
+
+            @Override
             public void onAdClosed() {
                 super.onAdClosed();
                 mAdView2.loadAd(new AdRequest.Builder().build());
             }
         });
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                chech = true;
+            }
+        }, 60000);
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Robi.interstitialAd.showAd();
+        if (chech==true){
+            if (Robi.mInterstitialAd != null) {
+                Robi.mInterstitialAd.show(Robi_Internet_Recharge.this);
+            }
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mAdView.destroy();
+        mAdView2.destroy();
     }
 
     public void flexiload(View view) {
         startActivity(new Intent(getApplicationContext(),Flexiload.class));
         if (Robi.mInterstitialAd != null) {
             Robi.mInterstitialAd.show(Robi_Internet_Recharge.this);
-        }else {Robi.interstitialAd.showAd();}
+        }
     }
 }

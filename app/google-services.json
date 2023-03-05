@@ -7,6 +7,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:216384619665:android:bb95a397201be3d03e2b30",
+        "android_client_info": {
+          "package_name": "com.apsmarket.robiinternetandminuteoffer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216384619665-1udnvbco067hv7kmvlmernvru1pdf4et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8TdNJ-k52XDVX5TVfs7EVxXrzG099hIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216384619665-1udnvbco067hv7kmvlmernvru1pdf4et.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:216384619665:android:9bf10e36090380d83e2b30",
         "android_client_info": {
           "package_name": "com.apsmarket.robiinternetoffer"

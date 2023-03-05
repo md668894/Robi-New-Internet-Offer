@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.webkit.CookieManager;
 import android.webkit.WebChromeClient;
@@ -17,6 +18,7 @@ import com.facebook.ads.AudienceNetworkAds;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
@@ -32,6 +34,7 @@ public class Robi_Regular_Internet extends AppCompatActivity {
     ProgressBar progressBar;
 
     private AdView mAdView;
+    private  boolean chech = false;
     ScheduledExecutorService scheduler;
 
     @Override
@@ -39,6 +42,8 @@ public class Robi_Regular_Internet extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_robi_regular_internet);
         getSupportActionBar().hide();
+        TextView textView = findViewById(R.id.errorText);
+        textView.setVisibility(View.INVISIBLE);
 
         AudienceNetworkAds.initialize(this);
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
@@ -57,11 +62,29 @@ public class Robi_Regular_Internet extends AppCompatActivity {
             }
 
             @Override
+            public void onAdFailedToLoad(LoadAdError loadAdError) {
+                super.onAdFailedToLoad(loadAdError);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mAdView.loadAd(new AdRequest.Builder().build());
+                    }
+                }, 10000);
+            }
+
+            @Override
             public void onAdClosed() {
                 super.onAdClosed();
                 mAdView.loadAd(new AdRequest.Builder().build());
             }
         });
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                chech = true;
+            }
+        }, 60000);
 
         progressBar = findViewById(R.id.progressBar);
         progressBar.setMax(100);
@@ -160,8 +183,10 @@ public class Robi_Regular_Internet extends AppCompatActivity {
             webView.goBack();
         } else {
             super.onBackPressed();
-            if (Robi.interstitialAd.isReady()) {
-                Robi.interstitialAd.showAd();
+            if (chech==true){
+                if (Robi.mInterstitialAd != null) {
+                    Robi.mInterstitialAd.show(Robi_Regular_Internet.this);
+                }
             }
         }
     }
@@ -170,7 +195,7 @@ public class Robi_Regular_Internet extends AppCompatActivity {
         finish();
         if (Robi.mInterstitialAd != null) {
             Robi.mInterstitialAd.show(Robi_Regular_Internet.this);
-        }else {Robi.interstitialAd.showAd();}
+        }
     }
 
     public void back(View view) {
@@ -206,15 +231,15 @@ public class Robi_Regular_Internet extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         public void run() {
                             if (Robi.mInterstitialAd != null) {
-                                Robi.interstitialAd.showAd();
+                                Robi.mInterstitialAd.show(Robi_Regular_Internet.this);
                             } else {
-                                Robi.interstitialAd.showAd();
+                                //Robi.interstitialAd.showAd();
                             }
                             //I_ADS();
                         }
                     });
                 }
-            }, 6, 6, TimeUnit.MINUTES);
+            }, 7, 7, TimeUnit.MINUTES);
         }
     }
 }
