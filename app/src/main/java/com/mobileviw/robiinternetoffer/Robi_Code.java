@@ -1,4 +1,4 @@
-package com.apsmarket.robiinternetoffer;
+package com.mobileviw.robiinternetoffer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,16 +15,16 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
-public class Robi_Socal_Pack extends AppCompatActivity {
+public class Robi_Code extends AppCompatActivity {
     private AdView mAdView;
+    private  boolean chech = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_robi_socal_pack);
-        getSupportActionBar().setTitle("রবি সোশ্যাল অফার:");
+        setContentView(R.layout.activity_robi_code);
+        getSupportActionBar().setTitle("রবি কিছু প্রয়োজনীয় কোড:");
         getSupportActionBar().setSubtitle("রবি ইন্টারনেট ও মিনিট অফার");
-
 
         AudienceNetworkAds.initialize(this);
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
@@ -45,12 +45,7 @@ public class Robi_Socal_Pack extends AppCompatActivity {
             @Override
             public void onAdFailedToLoad(LoadAdError loadAdError) {
                 super.onAdFailedToLoad(loadAdError);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mAdView.loadAd(new AdRequest.Builder().build());
-                    }
-                }, 10000);
+                mAdView.loadAd(new AdRequest.Builder().build());
             }
 
             @Override
@@ -59,7 +54,22 @@ public class Robi_Socal_Pack extends AppCompatActivity {
                 mAdView.loadAd(new AdRequest.Builder().build());
             }
         });
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                chech = true;
+            }
+        }, 60000);
+    }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (chech==true){
+            if (Robi.mInterstitialAd != null) {
+                Robi.mInterstitialAd.show(Robi_Code.this);
+            }
+        }
     }
 
     @Override

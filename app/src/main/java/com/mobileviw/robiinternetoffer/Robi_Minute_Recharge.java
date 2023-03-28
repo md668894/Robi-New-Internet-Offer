@@ -1,11 +1,11 @@
-package com.apsmarket.robiinternetoffer;
+package com.mobileviw.robiinternetoffer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-
 import com.facebook.ads.AudienceNetworkAds;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -15,15 +15,16 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
-public class Robi_Minute_offer extends AppCompatActivity {
+public class Robi_Minute_Recharge extends AppCompatActivity {
     private AdView mAdView;
     private  boolean chech = false;
+    private AdView mAdView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_robi_minute_offer);
-        getSupportActionBar().setTitle("রবি মিনিট অফার:");
+        setContentView(R.layout.activity_robi_minute_recharge);
+        getSupportActionBar().setTitle("রবি মিনিট রিচার্জ অফার:");
         getSupportActionBar().setSubtitle("রবি ইন্টারনেট ও মিনিট অফার");
 
 
@@ -46,12 +47,7 @@ public class Robi_Minute_offer extends AppCompatActivity {
             @Override
             public void onAdFailedToLoad(LoadAdError loadAdError) {
                 super.onAdFailedToLoad(loadAdError);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mAdView.loadAd(new AdRequest.Builder().build());
-                    }
-                }, 10000);
+                mAdView.loadAd(new AdRequest.Builder().build());
             }
 
             @Override
@@ -60,7 +56,28 @@ public class Robi_Minute_offer extends AppCompatActivity {
                 mAdView.loadAd(new AdRequest.Builder().build());
             }
         });
+        mAdView2 = findViewById(R.id.adView2);
+        AdRequest request = new AdRequest.Builder().build();
+        mAdView2.loadAd(request);
+        mAdView2.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                mAdView2.setVisibility(View.VISIBLE);
+            }
 
+            @Override
+            public void onAdFailedToLoad(LoadAdError loadAdError) {
+                super.onAdFailedToLoad(loadAdError);
+                mAdView2.loadAd(new AdRequest.Builder().build());
+            }
+
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                mAdView2.loadAd(new AdRequest.Builder().build());
+            }
+        });
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -75,7 +92,7 @@ public class Robi_Minute_offer extends AppCompatActivity {
         super.onBackPressed();
         if (chech==true){
             if (Robi.mInterstitialAd != null) {
-                Robi.mInterstitialAd.show(Robi_Minute_offer.this);
+                Robi.mInterstitialAd.show(Robi_Minute_Recharge.this);
             }
         }
     }
@@ -84,5 +101,6 @@ public class Robi_Minute_offer extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         mAdView.destroy();
+        mAdView2.destroy();
     }
 }

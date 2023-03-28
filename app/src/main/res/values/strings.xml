@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Robi Internet Offer</string>
 
-    <string name="banner1">ca-app-pub-2518334745896640/7486636024</string>
-    <string name="banner2">ca-app-pub-2518334745896640/9234831969</string>
-    <string name="banner3">ca-app-pub-2518334745896640/3507275831</string>
-    <string name="banner4">ca-app-pub-2518334745896640/2784973681</string>
-    <string name="banner5">ca-app-pub-2518334745896640/1471892013</string>
-    <string name="banner6">ca-app-pub-2518334745896640/9249036530</string>
+    <string name="banner1">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner2">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner3">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner4">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner5">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner6">ca-app-pub-3940256099942544/6300978111</string>
 
-    <string name="i_ads">ca-app-pub-2518334745896640/8935449063</string>
+    <string name="i_ads">ca-app-pub-3940256099942544/1033173712</string>
 
 
     <string name="robi_regular_internet">https://mobileviw.com/go/robi-internet-offer</string>
@@ -125,7 +125,7 @@ MB কিনতে <b><font color="#008DFD">*8444#</font></b> অথবা <b><f
 
 
 
-    <string name="loadtext">এই অফার গুলো শুধুমাত্র রবি জি স্টোর থেকে রিচার্জ করলেই পাবেন অথবা আপনি চাইলে আমাদের কাছ থেকে টাকা পাঠিয়ে কিনে নিতে পারেন। প্যাকেজ গুলো যেভাবে আমাদের কাছ থেকে নিবেন, </string>
+    <string name="loadtext">এই অফার গুলো শুধুমাত্র রবি জি স্টোর থেকে রিচার্জ করলেই পাবেন। প্যাকেজগুলো কিনার সময় অবশ্যই চেক করে নিবেন, প্যাকেজটা বর্তমানে আছে কিনা.</string>
     <string name="robi_recharge_offer">
 <b><font color="#147ED3">39 টাকায়</font></b> \n1.5 জিবি + 15 মিনিট মেয়াদ 3 দিন \n\n
 <b><font color="#147ED3">98 টাকায়</font></b> \n5 জিবি + 50 মিনিট মেয়াদ 3 দিন \n\n
@@ -151,16 +151,6 @@ MB কিনতে <b><font color="#008DFD">*8444#</font></b> অথবা <b><f
 350 এমবি ইমো প্যাক 20 টাকা  মেয়াদ 3 দিন - *123*56# \n\n
 1 জিবি ইমো প্যাক 55 টাকা  মেয়াদ 28  দিন - *123*056# \n\n
 3 জিবি  ফেইসবুক 95 টাকা  মেয়াদ 30 দিন - *212*717#</string>
-
-    <string name="flexiload"><b><font color="#FFFD0257">✅1.</font></b> আপনি যদি ঘরে বসে আমাদের কাছ থেকে কোন ইন্টারনেট বা মিনিট প্যাকেজ কিনতে চান, তাহলে প্রথমে সেই প্যাকেজের গায়ে কত টাকা লেখা আছে তা চেক করুন। \n\n
-
- <b><font color="#FFFD0257">✅2.</font></b> তারপর সেই টাকাটা আমাদের এই নাম্বারে (01813420461) সেন্ড মানি করবেন। বিকাশ, নগদ অথবা রকেটে। \n\n
-
-✅ তারপর আমাদেরকে কল করে জানিয়ে দিন আপনি কত নাম্বার থেকে টাকা পাঠিয়েছেন এবং কোন নাম্বারে প্যাকেজটা নিতে চান আমরা সাথে সাথে সেই নাম্বারে প্যাকেজটা পাঠিয়ে দিব।</string>
-
-    <string name="flexiload1">❌<b><font color="#FFFD0257">লক্ষ করুনঃ অযথা অন্য কোনো তথ্যের জন্য কল দিয়ে বিরক্ত করবেন না। শুধুমাত্র যারা প্যাকেজ গুলো কিনতে চান, তারাই কল করবেন।</font></b></string>
-
-    <string name="bkash">আপনার যদি বিকাশ, নগদ, রকেট একাউন্ট খোলা না থাকে, তাহলে <a href="https://play.google.com/store/apps/details?id=com.apsmarket.mobilebanking">এখানে ক্লিক করে</a> এই অ্যাপটি ইন্সটল করুন।</string>
 
 
 </resources>

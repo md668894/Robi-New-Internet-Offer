@@ -1,4 +1,4 @@
-package com.apsmarket.robiinternetoffer;
+package com.mobileviw.robiinternetoffer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -45,12 +45,7 @@ public class Robi_Internet_offer extends AppCompatActivity {
             @Override
             public void onAdFailedToLoad(LoadAdError loadAdError) {
                 super.onAdFailedToLoad(loadAdError);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mAdView.loadAd(new AdRequest.Builder().build());
-                    }
-                }, 10000);
+                mAdView.loadAd(new AdRequest.Builder().build());
             }
 
             @Override
@@ -59,7 +54,6 @@ public class Robi_Internet_offer extends AppCompatActivity {
                 mAdView.loadAd(new AdRequest.Builder().build());
             }
         });
-
 
         new Handler().postDelayed(new Runnable() {
             @Override

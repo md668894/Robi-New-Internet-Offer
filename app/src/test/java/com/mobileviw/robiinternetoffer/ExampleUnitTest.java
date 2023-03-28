@@ -1,4 +1,4 @@
-package com.apsmarket.robiinternetoffer;
+package com.mobileviw.robiinternetoffer;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.apsmarket.robiinternetoffer;
+package com.mobileviw.robiinternetoffer;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Bitmap;
@@ -26,8 +26,6 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-
-import android.os.Bundle;
 
 public class Robi_Regular_Internet extends AppCompatActivity {
     WebView webView;
@@ -64,12 +62,7 @@ public class Robi_Regular_Internet extends AppCompatActivity {
             @Override
             public void onAdFailedToLoad(LoadAdError loadAdError) {
                 super.onAdFailedToLoad(loadAdError);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mAdView.loadAd(new AdRequest.Builder().build());
-                    }
-                }, 10000);
+                mAdView.loadAd(new AdRequest.Builder().build());
             }
 
             @Override
@@ -215,13 +208,6 @@ public class Robi_Regular_Internet extends AppCompatActivity {
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
-        scheduler.shutdownNow();
-        scheduler = null;
-    }
-
-    @Override
     protected void onStart(){
         super.onStart();
         if(scheduler == null) {
@@ -239,7 +225,15 @@ public class Robi_Regular_Internet extends AppCompatActivity {
                         }
                     });
                 }
-            }, 7, 7, TimeUnit.MINUTES);
+            }, 8, 8, TimeUnit.MINUTES);
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mAdView.destroy();
+        scheduler.shutdownNow();
+        scheduler = null;
     }
 }

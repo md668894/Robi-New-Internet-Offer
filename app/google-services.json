@@ -1,62 +1,33 @@
 {
   "project_info": {
-    "project_number": "216384619665",
-    "project_id": "robi-internet-offer-52332",
-    "storage_bucket": "robi-internet-offer-52332.appspot.com"
+    "project_number": "200396218206",
+    "project_id": "robi-gp-internet-offer",
+    "storage_bucket": "robi-gp-internet-offer.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:216384619665:android:bb95a397201be3d03e2b30",
+        "mobilesdk_app_id": "1:200396218206:android:8c479d459cd88e2d9b79cf",
         "android_client_info": {
-          "package_name": "com.apsmarket.robiinternetandminuteoffer"
+          "package_name": "com.mobileviw.robiinternetoffer"
         }
       },
       "oauth_client": [
         {
-          "client_id": "216384619665-1udnvbco067hv7kmvlmernvru1pdf4et.apps.googleusercontent.com",
+          "client_id": "200396218206-i7aqamij7c9qphifig25migt5g2gqe02.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC8TdNJ-k52XDVX5TVfs7EVxXrzG099hIU"
+          "current_key": "AIzaSyBAHzWo7MyWRe_gQN34AeKKm_ArVjKw_1g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "216384619665-1udnvbco067hv7kmvlmernvru1pdf4et.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:216384619665:android:9bf10e36090380d83e2b30",
-        "android_client_info": {
-          "package_name": "com.apsmarket.robiinternetoffer"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "216384619665-1udnvbco067hv7kmvlmernvru1pdf4et.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyC8TdNJ-k52XDVX5TVfs7EVxXrzG099hIU"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "216384619665-1udnvbco067hv7kmvlmernvru1pdf4et.apps.googleusercontent.com",
+              "client_id": "200396218206-i7aqamij7c9qphifig25migt5g2gqe02.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

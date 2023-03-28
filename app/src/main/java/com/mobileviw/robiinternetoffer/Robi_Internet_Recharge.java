@@ -1,4 +1,4 @@
-package com.apsmarket.robiinternetoffer;
+package com.mobileviw.robiinternetoffer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -46,12 +46,7 @@ public class Robi_Internet_Recharge extends AppCompatActivity {
             @Override
             public void onAdFailedToLoad(LoadAdError loadAdError) {
                 super.onAdFailedToLoad(loadAdError);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mAdView.loadAd(new AdRequest.Builder().build());
-                    }
-                }, 10000);
+                mAdView.loadAd(new AdRequest.Builder().build());
             }
 
             @Override
@@ -73,12 +68,7 @@ public class Robi_Internet_Recharge extends AppCompatActivity {
             @Override
             public void onAdFailedToLoad(LoadAdError loadAdError) {
                 super.onAdFailedToLoad(loadAdError);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mAdView2.loadAd(new AdRequest.Builder().build());
-                    }
-                }, 10000);
+                mAdView2.loadAd(new AdRequest.Builder().build());
             }
 
             @Override
@@ -111,12 +101,5 @@ public class Robi_Internet_Recharge extends AppCompatActivity {
         super.onDestroy();
         mAdView.destroy();
         mAdView2.destroy();
-    }
-
-    public void flexiload(View view) {
-        startActivity(new Intent(getApplicationContext(),Flexiload.class));
-        if (Robi.mInterstitialAd != null) {
-            Robi.mInterstitialAd.show(Robi_Internet_Recharge.this);
-        }
     }
 }

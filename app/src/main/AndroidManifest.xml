@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.apsmarket.robiinternetoffer">
+    package="com.mobileviw.robiinternetoffer">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
@@ -12,40 +12,37 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
-        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.RobiInternetOffer">
-        <activity android:name=".Robi"
+        <activity android:name="com.mobileviw.robiinternetoffer.Robi"
             android:exported="true">
         </activity>
-        <activity android:name=".Robi_Code"
+        <activity android:name="com.mobileviw.robiinternetoffer.Robi_Code"
             android:exported="true">
         </activity>
-        <activity android:name=".Robi_Minute_offer"
+        <activity android:name="com.mobileviw.robiinternetoffer.Robi_Minute_offer"
             android:exported="true">
         </activity>
-        <activity android:name=".Robi_Internet_offer"
+        <activity android:name="com.mobileviw.robiinternetoffer.Robi_Internet_offer"
             android:exported="true">
         </activity>
-        <activity android:name=".Robi_Socal_Pack"
+        <activity android:name="com.mobileviw.robiinternetoffer.Robi_Socal_Pack"
             android:exported="true">
         </activity>
-        <activity android:name=".Robi_Regular_Internet" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+        <activity android:name="com.mobileviw.robiinternetoffer.Robi_Regular_Internet" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:exported="true">
         </activity>
-        <activity android:name=".Robi_Minute_Recharge"
+        <activity android:name="com.mobileviw.robiinternetoffer.Robi_Minute_Recharge"
             android:exported="true">
         </activity>
-        <activity android:name=".Robi_Internet_Recharge"
+        <activity android:name="com.mobileviw.robiinternetoffer.Robi_Internet_Recharge"
             android:exported="true">
         </activity>
-        <activity android:name=".Robi_Recharge"
-            android:exported="true">
-        </activity>
-        <activity android:name=".Flexiload"
+        <activity android:name="com.mobileviw.robiinternetoffer.Robi_Recharge"
             android:exported="true">
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.mobileviw.robiinternetoffer.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,7 +53,7 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-2518334745896640~8446146864"/>
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="702075441322265"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="196283499685920"/>
         <meta-data
             android:name="applovin.sdk.key"
             android:value="IEtrJPEnAqHTuB3lNEKCsCBXC83bWIo8vfRzpI5id4UgDAfvvGXANVMtmexc_ueL7NZJzXd2xz02StMisFWTzz" />

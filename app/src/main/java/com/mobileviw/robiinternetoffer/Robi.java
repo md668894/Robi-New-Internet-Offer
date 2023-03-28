@@ -1,4 +1,4 @@
-package com.apsmarket.robiinternetoffer;
+package com.mobileviw.robiinternetoffer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,10 +16,6 @@ import android.os.Handler;
 import android.provider.Settings;
 import android.view.View;
 
-import com.applovin.mediation.MaxAd;
-import com.applovin.mediation.MaxAdViewAdListener;
-import com.applovin.mediation.MaxError;
-import com.applovin.mediation.ads.MaxInterstitialAd;
 import com.facebook.ads.AudienceNetworkAds;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -81,12 +77,7 @@ public class Robi extends AppCompatActivity {
             @Override
             public void onAdFailedToLoad(LoadAdError loadAdError) {
                 super.onAdFailedToLoad(loadAdError);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mAdView.loadAd(new AdRequest.Builder().build());
-                    }
-                }, 10000);
+                mAdView.loadAd(new AdRequest.Builder().build());
             }
 
             @Override
@@ -246,15 +237,8 @@ public class Robi extends AppCompatActivity {
         }
     }
 
-    public void flexiload(View view) {
-        startActivity(new Intent(getApplicationContext(),Flexiload.class));
-        if (mInterstitialAd != null){
-            mInterstitialAd.show(Robi.this);
-        }
-    }
-
     public void more(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Aps+Market"));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Mobileviw"));
         startActivity(intent);
     }
 

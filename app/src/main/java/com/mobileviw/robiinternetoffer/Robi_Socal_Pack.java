@@ -1,14 +1,9 @@
-package com.apsmarket.robiinternetoffer;
+package com.mobileviw.robiinternetoffer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.text.method.LinkMovementMethod;
 import android.view.View;
-import android.widget.TextView;
 
 import com.facebook.ads.AudienceNetworkAds;
 import com.google.android.gms.ads.AdListener;
@@ -19,18 +14,15 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
-public class Flexiload extends AppCompatActivity {
+public class Robi_Socal_Pack extends AppCompatActivity {
     private AdView mAdView;
-    private  boolean chech = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_flexiload);
-        getSupportActionBar().setTitle("ইন্টারনেট বা মিনিট কিনুন ঘরে বসেই:");
+        setContentView(R.layout.activity_robi_socal_pack);
+        getSupportActionBar().setTitle("রবি সোশ্যাল অফার:");
         getSupportActionBar().setSubtitle("রবি ইন্টারনেট ও মিনিট অফার");
-        TextView textView = findViewById(R.id.mobile_banking);
-        textView.setMovementMethod(LinkMovementMethod.getInstance());
 
 
         AudienceNetworkAds.initialize(this);
@@ -52,12 +44,7 @@ public class Flexiload extends AppCompatActivity {
             @Override
             public void onAdFailedToLoad(LoadAdError loadAdError) {
                 super.onAdFailedToLoad(loadAdError);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mAdView.loadAd(new AdRequest.Builder().build());
-                    }
-                }, 10000);
+                mAdView.loadAd(new AdRequest.Builder().build());
             }
 
             @Override
@@ -67,34 +54,11 @@ public class Flexiload extends AppCompatActivity {
             }
         });
 
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                chech = true;
-            }
-        }, 60000);
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        if (chech==true){
-            if (Robi.mInterstitialAd != null) {
-                Robi.mInterstitialAd.show(Flexiload.this);
-            }
-        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         mAdView.destroy();
-    }
-
-    public void call_us(View view) {
-        Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:01813420461"));
-        startActivity(intent);
     }
 }
