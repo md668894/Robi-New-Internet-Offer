@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
 
     <application
         android:allowBackup="true"
@@ -52,11 +53,9 @@
         </activity>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-2518334745896640~8446146864"/>
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="196283499685920"/>
-        <meta-data
-            android:name="applovin.sdk.key"
-            android:value="IEtrJPEnAqHTuB3lNEKCsCBXC83bWIo8vfRzpI5id4UgDAfvvGXANVMtmexc_ueL7NZJzXd2xz02StMisFWTzz" />
+            android:value="ca-app-pub-2518334745896640~5833291315"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="268405452414993"/>
+
     </application>
 
 </manifest>

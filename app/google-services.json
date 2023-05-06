@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "200396218206",
-    "project_id": "robi-gp-internet-offer",
-    "storage_bucket": "robi-gp-internet-offer.appspot.com"
+    "project_number": "609679217371",
+    "project_id": "robi-gp-internet-offer-58839",
+    "storage_bucket": "robi-gp-internet-offer-58839.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:200396218206:android:8c479d459cd88e2d9b79cf",
+        "mobilesdk_app_id": "1:609679217371:android:810c47e36837dc96e5b2fe",
         "android_client_info": {
           "package_name": "com.mobileviw.robiinternetoffer"
         }
       },
       "oauth_client": [
         {
-          "client_id": "200396218206-i7aqamij7c9qphifig25migt5g2gqe02.apps.googleusercontent.com",
+          "client_id": "609679217371-7t8h2m61uine8odff91poe02d0i1no8t.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBAHzWo7MyWRe_gQN34AeKKm_ArVjKw_1g"
+          "current_key": "AIzaSyCNtwKLKzriCfE8X1jdtg_vOWJznw-V8m8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "200396218206-i7aqamij7c9qphifig25migt5g2gqe02.apps.googleusercontent.com",
+              "client_id": "609679217371-7t8h2m61uine8odff91poe02d0i1no8t.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

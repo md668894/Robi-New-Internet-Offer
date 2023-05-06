@@ -123,21 +123,11 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="8dp"
-                    android:text="রবি ইন্টারনেট ও মিনিট কমিশন অফার:"
+                    android:text="রবি ইন্টারনেট ও মিনিট ক্যাশব্যাক অফার:"
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
-
-
-            <LinearLayout
-                android:id="@+id/banner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="4dp"
-                android:gravity="center"
-                android:orientation="vertical"></LinearLayout>
 
 
             <androidx.cardview.widget.CardView
@@ -256,12 +246,6 @@
                     android:onClick="share"
                     android:src="@drawable/share" />
 
-                <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:onClick="facebook"
-                    android:src="@drawable/facebook" />
 
                 <ImageView
                     android:layout_width="45dp"

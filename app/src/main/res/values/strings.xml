@@ -1,17 +1,17 @@
 <resources>
     <string name="app_name">Robi Internet Offer</string>
 
-    <string name="banner1">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner2">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner3">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner4">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner5">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner6">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner1">ca-app-pub-2518334745896640/2517772927</string>
+    <string name="banner2">ca-app-pub-2518334745896640/6819980019</string>
+    <string name="banner3">ca-app-pub-2518334745896640/8075568972</string>
+    <string name="banner4">ca-app-pub-2518334745896640/7091442753</string>
+    <string name="banner5">ca-app-pub-2518334745896640/2775140839</string>
+    <string name="banner6">ca-app-pub-2518334745896640/4193816671</string>
 
-    <string name="i_ads">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="i_ads">ca-app-pub-2518334745896640/9258441093</string>
 
 
-    <string name="robi_regular_internet">https://mobileviw.com/go/robi-internet-offer</string>
+    <string name="robi_regular_internet">https://mobileviw.com/go/robi-daily-internet-offer</string>
 
     <string name="webview_text">1.Please Check Internet Connetion.\n2.Then Refresh This Page.</string>
 
@@ -96,7 +96,7 @@ MB কিনতে <b><font color="#008DFD">*8444#</font></b> অথবা <b><f
         <b><font color="#147ED3"> 69 টাকায় </font></b>\n 100 মিনিট মেয়াদ - 7 দিন \n\n
 
         <b><font color="#147ED3"> 108 টাকায় </font></b>\n 180 মিনিট মেয়াদ - 7 দিন \n\n
-        <b><font color="#147ED3"> 127 টাকায় </font></b>\n 200 মিনিট মেয়াদ - 7 দিন \n\n
+        <b><font color="#147ED3"> 127 টাকায় </font></b>\n 200 মিনিট মেয়াদ - 10 দিন \n\n
         <b><font color="#147ED3"> 146 টাকায় </font></b>\n 210 মিনিট মেয়াদ - 15 দিন \n\n
 
         <b><font color="#147ED3"> 109 টাকায় </font></b>\n 165 মিনিট মেয়াদ - 30 দিন \n\n
@@ -112,7 +112,6 @@ MB কিনতে <b><font color="#008DFD">*8444#</font></b> অথবা <b><f
        4 জিবি <b><font color="#147ED3"> 68 টাকা </font></b> মেয়াদ 3 দিন \n\n
        7 জিবি <b><font color="#147ED3"> 89 টাকা </font></b> মেয়াদ 3 দিন \n\n
 
-       3 জিবি <b><font color="#147ED3"> 114 টাকা </font></b> মেয়াদ 7 দিন \n\n
        7 জিবি <b><font color="#147ED3"> 129 টাকা </font></b> মেয়াদ 7 দিন \n\n
        10 জিবি <b><font color="#147ED3"> 148 টাকা </font></b> মেয়াদ 7 দিন \n\n
        16 জিবি <b><font color="#147ED3"> 178 টাকা </font></b> মেয়াদ 7 দিন \n\n
@@ -121,25 +120,26 @@ MB কিনতে <b><font color="#008DFD">*8444#</font></b> অথবা <b><f
        12 জিবি <b><font color="#147ED3"> 349 টাকা </font></b> মেয়াদ 30 দিন \n\n
        18 জিবি <b><font color="#147ED3"> 399 টাকা </font></b> মেয়াদ 30 দিন \n\n
        35 জিবি <b><font color="#147ED3"> 497 টাকা </font></b> মেয়াদ 30 দিন \n\n
+       45 জিবি <b><font color="#147ED3"> 598 টাকা </font></b> মেয়াদ 30 দিন \n\n
        60 জিবি <b><font color="#147ED3"> 698 টাকা </font></b> মেয়াদ 30 দিন </string>
 
 
 
-    <string name="loadtext">এই অফার গুলো শুধুমাত্র রবি জি স্টোর থেকে রিচার্জ করলেই পাবেন। প্যাকেজগুলো কিনার সময় অবশ্যই চেক করে নিবেন, প্যাকেজটা বর্তমানে আছে কিনা.</string>
+    <string name="loadtext">এই অফার গুলো শুধুমাত্র রবি জি স্টোর থেকে রিচার্জ করলেই পাবেন। প্যাকেজগুলো লোড করার সময় অবশ্যই চেক করে নিবেন, আফারটা আছে কিনা।</string>
     <string name="robi_recharge_offer">
 <b><font color="#147ED3">39 টাকায়</font></b> \n1.5 জিবি + 15 মিনিট মেয়াদ 3 দিন \n\n
 <b><font color="#147ED3">98 টাকায়</font></b> \n5 জিবি + 50 মিনিট মেয়াদ 3 দিন \n\n
 <b><font color="#147ED3">149 টাকায়</font></b> \n5 জিবি + 200 মিনিট মেয়াদ 7 দিন \n\n
 
-<b><font color="#147ED3">249 টাকায়</font></b> \n3 জিবি + 200 মিনিট মেয়াদ 30 দিন \n\n
-<b><font color="#147ED3">269 টাকায়</font></b> \n5 জিবি + 250 মিনিট মেয়াদ 30 দিন \n\n
+<b><font color="#147ED3">269 টাকায়</font></b> \n4 জিবি + 200 মিনিট মেয়াদ 30 দিন \n\n
 <b><font color="#147ED3">297 টাকায়</font></b> \n6 জিবি + 300 মিনিট মেয়াদ 30 দিন \n\n
 <b><font color="#147ED3">397 টাকায়</font></b> \n8 জিবি + 250 মিনিট মেয়াদ 30 দিন \n\n
 
+<b><font color="#147ED3">499 টাকায়</font></b> \n16 জিবি + 350 মিনিট মেয়াদ 30 দিন \n\n
 <b><font color="#147ED3">599 টাকায়</font></b> \n18 জিবি + 400 মিনিট মেয়াদ 30 দিন \n\n
 <b><font color="#147ED3">609 টাকায়</font></b> \n1 জিবি + 1000 মিনিট মেয়াদ 30 দিন \n\n
 <b><font color="#147ED3">719 টাকায়</font></b> \n30 জিবি + 700 মিনিট মেয়াদ 30 দিন \n\n
-<b><font color="#147ED3">799 টাকায়</font></b> \n40 জিবি + 800 মিনিট মেয়াদ 30 দিন \n\n
+<b><font color="#147ED3">799 টাকায়</font></b> \n40 জিবি + 700 মিনিট মেয়াদ 30 দিন \n\n
 <b><font color="#147ED3">899 টাকায়</font></b> \n45 জিবি + 1000 মিনিট মেয়াদ 30 দিন \n\n
      <b><font color="#147ED3">এই অফার গুলো চিটাগাং বিভাগ বাদে সবাই পাবে...</font></b> </string>
 

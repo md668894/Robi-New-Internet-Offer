@@ -44,7 +44,7 @@ public class Robi extends AppCompatActivity {
     public static InterstitialAd mInterstitialAd;
 
     private AppUpdateManager appUpdateManager;
-    private static int Update_Code = 5;
+    private static int Update_Code = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,7 @@ public class Robi extends AppCompatActivity {
 
         // OneSignal Initialization
         OneSignal.initWithContext(this);
-        OneSignal.setAppId("312c0a96-63df-4b15-b9ca-01e5b34d9229");
+        OneSignal.setAppId("633d0bd2-44a5-4124-8392-8616904da29a");
         getSupportActionBar().setTitle("রবি ইন্টারনেট ও মিনিট অফার");
 
         AudienceNetworkAds.initialize(this);
@@ -238,7 +238,7 @@ public class Robi extends AppCompatActivity {
     }
 
     public void more(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Mobileviw"));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Mobileviw+Private+Limited"));
         startActivity(intent);
     }
 
@@ -261,10 +261,6 @@ public class Robi extends AppCompatActivity {
             startActivity(Intent.createChooser(shareIntent, "choose one"));
         } catch (Exception e) { //e.toString(); }
         }
-    }
-
-    public void facebook(View view) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://web.facebook.com/apmarket4")));
     }
 
     public void privacy(View view) {
