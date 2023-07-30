@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
+import android.widget.TextView;
+
 import com.facebook.ads.AudienceNetworkAds;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -27,6 +30,8 @@ public class Robi_Recharge extends AppCompatActivity {
         getSupportActionBar().setTitle("রবি রিচার্জ অফার:");
         getSupportActionBar().setSubtitle("রবি ইন্টারনেট ও মিনিট অফার");
 
+        TextView textView = findViewById(R.id.text2);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
 
         AudienceNetworkAds.initialize(this);
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
@@ -42,12 +47,6 @@ public class Robi_Recharge extends AppCompatActivity {
             public void onAdLoaded() {
                 super.onAdLoaded();
                 mAdView.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAdFailedToLoad(LoadAdError loadAdError) {
-                super.onAdFailedToLoad(loadAdError);
-                mAdView.loadAd(new AdRequest.Builder().build());
             }
 
             @Override

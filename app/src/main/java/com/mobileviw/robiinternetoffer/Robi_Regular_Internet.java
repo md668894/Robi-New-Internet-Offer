@@ -60,12 +60,6 @@ public class Robi_Regular_Internet extends AppCompatActivity {
             }
 
             @Override
-            public void onAdFailedToLoad(LoadAdError loadAdError) {
-                super.onAdFailedToLoad(loadAdError);
-                mAdView.loadAd(new AdRequest.Builder().build());
-            }
-
-            @Override
             public void onAdClosed() {
                 super.onAdClosed();
                 mAdView.loadAd(new AdRequest.Builder().build());
@@ -225,7 +219,7 @@ public class Robi_Regular_Internet extends AppCompatActivity {
                         }
                     });
                 }
-            }, 8, 8, TimeUnit.MINUTES);
+            }, 7, 7, TimeUnit.MINUTES);
         }
     }
 

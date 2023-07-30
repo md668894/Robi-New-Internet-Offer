@@ -37,14 +37,24 @@ import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.play.core.tasks.OnSuccessListener;
 import com.google.android.play.core.tasks.Task;
+import com.google.android.ump.ConsentForm;
+import com.google.android.ump.ConsentInformation;
+import com.google.android.ump.ConsentRequestParameters;
+import com.google.android.ump.FormError;
+import com.google.android.ump.UserMessagingPlatform;
 import com.onesignal.OneSignal;
+
+import org.jetbrains.annotations.Nullable;
 
 public class Robi extends AppCompatActivity {
     private AdView mAdView;
     public static InterstitialAd mInterstitialAd;
 
     private AppUpdateManager appUpdateManager;
-    private static int Update_Code = 1;
+    private static int Update_Code = 2;
+
+    private ConsentInformation consentInformation;
+    private ConsentForm consentForm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,12 +85,6 @@ public class Robi extends AppCompatActivity {
             }
 
             @Override
-            public void onAdFailedToLoad(LoadAdError loadAdError) {
-                super.onAdFailedToLoad(loadAdError);
-                mAdView.loadAd(new AdRequest.Builder().build());
-            }
-
-            @Override
             public void onAdClosed() {
                 super.onAdClosed();
                 mAdView.loadAd(new AdRequest.Builder().build());
@@ -88,8 +92,50 @@ public class Robi extends AppCompatActivity {
         });
         I_ADS();
         inAppUpdate();
-    }
 
+        ConsentRequestParameters params = new ConsentRequestParameters
+                .Builder()
+                .setTagForUnderAgeOfConsent(false)
+                .build();
+
+        consentInformation = UserMessagingPlatform.getConsentInformation(this);
+        consentInformation.requestConsentInfoUpdate(
+                this,
+                params,
+                new ConsentInformation.OnConsentInfoUpdateSuccessListener() {
+                    @Override
+                    public void onConsentInfoUpdateSuccess() {
+                        // The consent information state was updated.
+                        // You are now ready to check if a form is available.
+                    }
+                },
+                new ConsentInformation.OnConsentInfoUpdateFailureListener() {
+                    @Override
+                    public void onConsentInfoUpdateFailure(FormError formError) {
+                        // Handle the error.
+                    }
+                });
+
+        consentInformation.requestConsentInfoUpdate(
+                this,
+                params,
+                new ConsentInformation.OnConsentInfoUpdateSuccessListener() {
+                    @Override
+                    public void onConsentInfoUpdateSuccess() {
+                        // The consent information state was updated.
+                        // You are now ready to check if a form is available.
+                        if (consentInformation.isConsentFormAvailable()) {
+                            loadForm();
+                        }
+                    }
+                },
+                new ConsentInformation.OnConsentInfoUpdateFailureListener() {
+                    @Override
+                    public void onConsentInfoUpdateFailure(FormError formError) {
+                        // Handle the error.
+                    }
+                });
+    }
     private void inAppUpdate() {
         appUpdateManager = AppUpdateManagerFactory.create(this);
         Task<AppUpdateInfo> task = appUpdateManager.getAppUpdateInfo();
@@ -170,7 +216,7 @@ public class Robi extends AppCompatActivity {
                     public void run() {
                         I_ADS();
                     }
-                }, 20000);
+                }, 30000);
             }
         });
     }
@@ -305,5 +351,32 @@ public class Robi extends AppCompatActivity {
         } else {
             warning();
         }
+    }
+
+    public void loadForm() {
+        UserMessagingPlatform.loadConsentForm(
+                this, new UserMessagingPlatform.OnConsentFormLoadSuccessListener() {
+                    @Override
+                    public void onConsentFormLoadSuccess(ConsentForm consentForm) {
+                        Robi.this.consentForm = consentForm;
+                        if (consentInformation.getConsentStatus() == ConsentInformation.ConsentStatus.REQUIRED) {
+                            consentForm.show(
+                                    Robi.this,
+                                    new ConsentForm.OnConsentFormDismissedListener() {
+                                        @Override
+                                        public void onConsentFormDismissed(@Nullable FormError formError) {
+                                            // Handle dismissal by reloading form.
+                                            loadForm();
+                                        }
+                                    });
+                        }
+                    }
+                },
+                new UserMessagingPlatform.OnConsentFormLoadFailureListener() {
+                    @Override
+                    public void onConsentFormLoadFailure(FormError formError) {
+                        // Handle the error.
+                    }
+                });
     }
 }

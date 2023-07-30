@@ -42,12 +42,6 @@ public class Robi_Socal_Pack extends AppCompatActivity {
             }
 
             @Override
-            public void onAdFailedToLoad(LoadAdError loadAdError) {
-                super.onAdFailedToLoad(loadAdError);
-                mAdView.loadAd(new AdRequest.Builder().build());
-            }
-
-            @Override
             public void onAdClosed() {
                 super.onAdClosed();
                 mAdView.loadAd(new AdRequest.Builder().build());
