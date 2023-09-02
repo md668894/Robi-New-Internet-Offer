@@ -51,7 +51,7 @@ public class Robi extends AppCompatActivity {
     public static InterstitialAd mInterstitialAd;
 
     private AppUpdateManager appUpdateManager;
-    private static int Update_Code = 2;
+    private static int Update_Code = 3;
 
     private ConsentInformation consentInformation;
     private ConsentForm consentForm;
@@ -60,12 +60,12 @@ public class Robi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_robi);
-        // Enable verbose OneSignal logging to debug issues if needed.
-        OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
 
-        // OneSignal Initialization
+        OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
         OneSignal.initWithContext(this);
         OneSignal.setAppId("633d0bd2-44a5-4124-8392-8616904da29a");
+        OneSignal.promptForPushNotifications();
+
         getSupportActionBar().setTitle("রবি ইন্টারনেট ও মিনিট অফার");
 
         AudienceNetworkAds.initialize(this);

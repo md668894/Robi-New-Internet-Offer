@@ -1,19 +1,18 @@
 plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
-    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.mobileviw.robiinternetoffer"
         minSdk 24
-        targetSdk 32
+        targetSdk 33
         multiDexEnabled true
-        versionCode 2
-        versionName "1.1"
+        versionCode 3
+        versionName "1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

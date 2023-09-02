@@ -85,7 +85,6 @@ public class Robi_Regular_Internet extends AppCompatActivity {
         webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
         webView.getSettings().setAllowFileAccess(true);
         webView.getSettings().setAllowContentAccess(true);
-        webView.getSettings().setAppCacheEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
         CookieManager.getInstance().setAcceptCookie(true);
         if (android.os.Build.VERSION.SDK_INT >= 21) {
